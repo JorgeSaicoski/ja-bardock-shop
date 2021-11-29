@@ -1,0 +1,37 @@
+.divAddShopButton{
+	background-color: rgba(26,44,74,1);
+	color:#D4F1F4;
+	width: 30vw;
+	height: 10vh;
+	margin: 5vh;
+	font-size: 1.5em;
+}
+.containerLoad{
+	width: 100vw;
+	position: absolute;
+	top: 48vh;
+	right: 0;
+	width: 100vw;
+	height: 100vh;
+	border: 3px solid #73AD21;
+	font-size: 2em;
+	background-color: rgba(26,44,74,1);
+
+}
+.loading{
+	position: relative;
+	height: 100%;
+	width: 600vw;
+	background: linear-gradient(90deg, rgba(117,117,222,1) 5%, rgba(26,44,74,1) 77%, rgba(26,44,74,1) 100%);
+	animation: load-effect infinite 3s linear;
+}
+
+
+@keyframes load-effect {
+  from {
+    transform: translate(0vw);
+  }
+  to {
+    transform: translate(-500vw);
+  }
+}

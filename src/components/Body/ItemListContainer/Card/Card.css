@@ -1,0 +1,52 @@
+.cardContainer{
+  flex-direction: row;
+  justify-content: center;
+}
+.card{
+  width: 35vw;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  background-color: #D4F1F4;
+  margin: 5vh;
+}
+.cardHeader{
+  margin: 0 5vw 2.5vh 5vw;
+  color: #116530;
+}
+.cardPrice{
+  background-color: #75E6DA;
+  width: 100%;
+  color: #116530;
+}
+.detalle{
+  background-color: #116530;
+  color:#75E6DA;
+  padding: 1vh;
+  border-radius: 10px
+}
+.cardBody{
+  width: 20vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  align-items: center;
+}
+img{
+  height: 22.5vh;
+}
+
+@media (max-width: 900px){
+  .card{
+    width: 60vw;
+    height: 50vh;
+  }
+  img{
+    width: 35vw;
+    height: auto;
+  }
+}

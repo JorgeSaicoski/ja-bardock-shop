@@ -1,0 +1,14 @@
+.cardAdminContainer{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.cardAdmin{
+  width: 35vw;
+  height: 20vh;
+}
+.cardAdminHeader{
+  background-color: #75E6DA
+}

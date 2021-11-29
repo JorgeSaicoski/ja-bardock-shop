@@ -1,0 +1,46 @@
+.navbar{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 00vh;
+	transition-duration: 1s;
+	align-items: center;
+	overflow: hidden;
+}
+.navbar-active{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 50vh;
+	transition-duration: 1s;
+	align-items: center;
+
+}
+.header-navbar{
+	display: flex;
+	flex-direction: column;
+	height: 50vh;
+	width:100%;
+	justify-content: center;
+	align-items: center;
+}
+.navbar-container{
+	display: flex;
+	flex-direction: column;
+	width: 100%
+}
+.logo{
+	height: 30vh;
+	width: 30vh;
+}
+.cartImg{
+	height: 10vh;
+	width:10vh;
+}
+.cartRow{
+	height: 20vh;
+	display: flex;
+	flex-direction: row;
+		justify-content: center;
+	align-items: center;
+}
