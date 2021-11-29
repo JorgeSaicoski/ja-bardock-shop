@@ -55,3 +55,14 @@ Ademas, ahorra que el browser quede carregando las paginas.
 
 ## Firebase
 Firebase fue utilizado como base dados
+
+# Pagina
+## Productos
+Los productos son listados en la pagina inicial y podran ser filtrado por categoria.
+La informacion vien de Firebase
+### Detalles
+La pagina de detalle sirvé para agregar itens al carrito
+## Carrito
+El carrito envia informaciones para la base (Firebase)
+### Admin
+Despues de enviar la informacion para la base, la pagina carga en http://localhost:3000/admin todos los compradores.
