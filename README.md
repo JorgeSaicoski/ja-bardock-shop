@@ -1,10 +1,26 @@
-# Getting Started with Create React App
+# Jorge Adriano's Shop
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Este proyecto fue hecho con Create React App.
+Esta desarollado para funcionar como una pagina padron de tienda online.
+Es facilmente adaptable y escalable.
 
-In the project directory, you can run:
+Fue utilizado React-Dom-Router para las rotas funcionaren correctamente. Y ahorrar render.
+
+El CSS esta puro y podra ser mejorado con SASS o librarias.
+
+## Alertas para futuros desarooladores
+
+El React-Route-Dom tuvo problemas con la version. Fue cambiado lo codigo para mejor funcionamento.
+En lugar de tener "Switch" hay "Routes". Ademas, las rotas fueran escritas de acuerdo a la nueva version.
+Si deseas escribir como estabas acostumbrado poderá seguir los seguintes pasos
+* Entrar en el terminal con la rota correcta del arquivo
+* Seguir los comandos en orden:
+** npm uninstall react-router-dom
+** npm install react-router-dom@5.2.0
+* Arreglar el code
+
 
 ### `npm start`
 
@@ -14,57 +30,28 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-### `npm test`
+El link arriba funcionar para visualizar la pagina. Y es actualizado siempre que salves nuevos arquivos.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+# Actualizar
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+En public/index.html agregas el nombre a tu tienda.
+En components/ agregas nuevos componentes. Deberas agregar en app.js y hacer su rota correctamente. Si deseas agregar en un components ya existente, es solamente hacer su rota.
+En products/products.js poderás agregar nuevos productos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Manutension
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+En components/ItemListContainer/Card esta la configuracion de los cards para demonstracion de lo productos en home.
+En components/ItemListContainer/ esta la organizacion de los cards en la pantallas. El ItemListContainerCategory es la herramienta de busqueda. Podras eligir un layout nuevo solamente para las busquedas.
+En components/ItemDetailContainer esta el layout de Description de los products. Hay un error en el button para agregar y yer al carrito. Fue declarado en la linea 34 y 37 pero no fue utilizado las lineas 56 e 58. Entonces hubo duplicidad de codigo.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Librarias
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## React Route Dom
+React Route Dom fue utilizado para hacer los links de la aplicacion.
+He posibilitado la criacion de las paginas con lo detalle del producto
+Ademas, ahorra que el browser quede carregando las paginas.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Firebase
+Firebase fue utilizado como base dados
