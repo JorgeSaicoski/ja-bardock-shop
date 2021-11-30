@@ -78,7 +78,7 @@ const Cart = () => {
  			})
 			console.log(orden)
  		setDoc(newOrder, orden);
-		alert("Tu id de compra es: "+newOrder.id+"en 7 dias entraremos en contacto")
+		alert("Tu id de compra es: "+newOrder.id+" en 7 dias entraremos en contacto")
  		}
 
 	return (
