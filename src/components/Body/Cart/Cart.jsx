@@ -22,37 +22,36 @@ const Cart = () => {
         phone:'',
         email: ''
     })
-    //valor total de la compra (puede ser repasada ao cartContexto)
-    const [total, setTotal]  = useState(0)
-    //no encontré otra soluccion para la subida de dados (que no era acepta sin una subida nula). Entonces, el review para confirmar que va tener la primera subida
-    const [review, setReview] = useState(false)
-    //const para check si el carrito esta vazio
-    const[cartClear, setCartClear] = useState(true)
-    //funcion para calcular calcular valor total de la compra y si es 0 enviar el cliente a comprar mas.
-    useEffect(() => {
-		let calculation = 0
-		for (let producto of cartList) {
-			const partial =(producto.price * producto.count)
-			calculation += partial
-			}
-		setTotal(calculation)
-		if(calculation===0){
-			setCartClear(true)
+  //valor total de la compra (puede ser repasada ao cartContexto)
+  const [total, setTotal]  = useState(0)
+  //no encontré otra soluccion para la subida de dados (que no era acepta sin una subida nula). Entonces, el review para confirmar que va tener la primera subida
+  const [review, setReview] = useState(false)
+  //const para check si el carrito esta vazio
+  const[cartClear, setCartClear] = useState(true)
+  //funcion para calcular calcular valor total de la compra y si es 0 enviar el cliente a comprar mas.
+  useEffect(() => {
+	let calculation = 0
+	for (let producto of cartList) {
+		const partial =(producto.price * producto.count)
+		calculation += partial
 		}
-		else {
-			setCartClear(false)
-		}
+	setTotal(calculation)
+	if(calculation===0){
+		setCartClear(true)
+	}
+	else {
+		setCartClear(false)
+	}
 	},[remove, clear, addToCart, cartList]);
-
+	//funcion para confirmar el carrito y enviar la lista de carrito visto (posibles estudos de la tienda)
 	const send = ()=>{
-
 		setTimeout(1500)
 		setDoc(doc(collection(db, "cartViews")), {cartList})
 		setReview(true)
-
-
 		}
-
+	function removeThis(id){
+		remove(id)
+	}
 	//mobilidad del form
 	const handleChange=(e)=>{
        setFormData({
@@ -108,13 +107,13 @@ const Cart = () => {
 						:
 						<div>
 							<p>Revisa tu carrito</p>
-							<div className="rowTitle"><p>Nombre del Product</p><p>Cantidade</p><p>Precio por Persona</p></div>
+							<div className="rowTitle"><p>Lista de compras</p></div>
 							{cartList.map(prod=>
-								<div>
-									<Link to={`/item/${prod.id}`} className="row"><p>{prod.name}</p><p>{prod.count}</p><p>{prod.price}</p></Link>
-									<div className="rowTitle"></div>
+								<div className="prod">
+									<Link to={`/item/${prod.id}`} className="row"><p>{prod.name}</p><p>{prod.count} alunos/paginas</p><p>{prod.price} UYU</p></Link>
+									<button className="remove-button" onClick={()=>removeThis(prod.id)}>Sacar {prod.name} del carrito</button>
 								</div> )}
-							<div className="rowTitle"><p>Total a Pagar</p><p>UYU</p><p>{total}</p></div>
+							<div className="rowTitle"><p>Total a Pagar</p><p>{total} UYU</p></div>
 							<button onClick={clear}>Limpar</button>
 							<button onClick={send}>esta correcto</button>
 						</div>

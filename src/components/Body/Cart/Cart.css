@@ -1,13 +1,26 @@
 .container-cart{
 	margin-top: 1vh
 }
+.prod{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: #05445E;
+}
+.remove-button{
+	width: 10vw;
+	height: auto;
+	background-color: red;
+	margin: 0 2vw;
+}
 .row{
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin: 0;
-  background-color: #05445E;
+
   text-decoration: none;
 }
 
